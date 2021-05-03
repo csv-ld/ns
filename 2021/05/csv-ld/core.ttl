@@ -1,0 +1,28 @@
+@prefix csvld: <http://ns.csv-ld.org/2021/05/csv-ld/core#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+<http://ns.csv-ld.org/2021/05/csv-ld/core> a owl:Ontology ;
+  dc:title "CSV-LD Core Vocabulary" ;
+  owl:versionIRI <http://ns.csv-ld.org/2021/05/csv-ld/core> .
+
+csvld:formatVersion
+  rdfs:label "formatVersion" ;
+  rdfs:comment "The version of the CSV-LD format that a processor should assume for this spreadsheet." .
+
+csvld:vocabBase
+  rdfs:label "vocabBase" ;
+  rdfs:comment """The "vocabulary base" for terms in this spreadsheet.""" .
+
+csvld:prefix
+  rdfs:label "prefix" ;
+  rdfs:comment "Defines a prefix so that common URI bases can be prefixes of term URIs." .
+
+csvld:id
+  rdfs:label "id" ;
+  rdfs:comment "The URI for this sheet." .
+
+csvld:csvw
+  rdfs:label "csvw" ;
+  rdfs:comment "The URI for JSON-LD CSVW metadata for this sheet." .
