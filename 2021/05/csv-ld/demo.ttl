@@ -1,0 +1,24 @@
+@prefix demo: <http://ns.csv-ld.org/2021/05/csv-ld/demo#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+<http://ns.csv-ld.org/2021/05/csv-ld/demo> a owl:Ontology ;
+  dc:title "CSV-LD Demo Vocabulary" ;
+  owl:versionIRI <http://ns.csv-ld.org/2021/05/csv-ld/demo> .
+
+demo:atom
+  rdfs:label "atom" ;
+  rdfs:comment "An atom, in [A-Z][a-z]? format, as per the XYZ file format for molecular structures." .
+
+demo:x
+  rdfs:label "x coordinate" ;
+  rdfs:comment "The X coordinate, in Angstroms, for an atom in a molecule as per the XYZ file format." .
+
+demo:y
+  rdfs:label "y coordinate" ;
+  rdfs:comment "The Y coordinate, in Angstroms, for an atom in a molecule as per the XYZ file format." .
+
+demo:z
+  rdfs:label "z coordinate" ;
+  rdfs:comment "The Z coordinate, in Angstroms, for an atom in a molecule as per the XYZ file format." .
