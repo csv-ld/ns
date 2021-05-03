@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <title>CSV-LD Namespace Server</title>
     <style>
-        pre {
-            display: inline;
+        body {
+            max-width: 50em;
         }
     </style>
 </head>
@@ -18,16 +18,17 @@
 
 </p>
 
-<p>Path format: <pre>/YYYY/MM/org/vocab#</pre></p>
+<p>Path format: <code>/YYYY/MM/org/vocab#</code></p>
 
 <p>Examples:
     <a href="/2021/05/csv-ld/core#">/2021/05/csv-ld/core#</a>,
     <a href="/2021/05/csv-ld/demo#">/2021/05/csv-ld/demo#</a>.
 </p>
 
-<p> Each vocabulary URI resolves to a <pre>text/html</pre> response with a <pre><link
-rel="alternate" ... /></pre> in its <pre>head</pre> that provides the vocabulary in an RDF format,
-e.g. <pre>text/turtle</pre>. This method of linking follows the example of RSS feeds. </p>
+<p> Each vocabulary URI resolves to a <code>text/html</code> response with a <code>&lt;link
+rel="alternate" ... /&gt;</code> in its <code>&lt;head&gt;</code> that provides the vocabulary in an
+RDF format, e.g. <code>text/turtle</code>. This method of linking follows the example of RSS feeds.
+</p>
 
 <p><a href="https://github.com/csv-ld/ns">GitHub repository</a>.</p>
 
