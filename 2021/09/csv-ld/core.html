@@ -26,8 +26,33 @@
       <dd>A human-readable name for the subject.</dd>
       <dt id="#comment">comment</dt>
       <dd>A description of the subject resource.</dd>
-      <dt id="#"></dt>
-      <dd></dd>
+      <dt id="#line">line</dt>
+      <dd>An identifier for the line of a changesheet. Useful if you want to annotate the change
+represented by that one line.</dd>
+      <dt id="#block">block</dt>
+      <dd>An identifier for a block, a set of lines, of a changesheet.
+Useful if you want to annotate the change represented by the block.
+A block is analogous to a git commit or database transaction.</dd>
+      <dt id="#inOrOut">in or out</dt>
+      <dd>Is this line being asserted ('in') or retracted ('out')? If left blank, assumes asserted.</dd>
+      <dt id="#namespace">namespace</dt>
+      <dd>Do you want to add this to the "main" namespace? A "test" namespace. If left blank, "main" is
+assumed. Analogous to a named graph or git branch.</dd>
+      <dt id="#subject">subject</dt>
+      <dd>An identifier for the subject of the statement to be asserted or retracted.
+If left blank and if previous row's object cell is also blank, then an identifier
+is generated for both. If not in the form of a URL or CURIE (using a registered #prefix),
+then the cell value is interpreted to be a variable so as to unify with its usages in
+other cells in the changesheet -- an identifier is generated to substitute for the variable.</dd>
+      <dt id="#predicate">predicate</dt>
+      <dd>An identifier or recognized label for the predicate/attribute part of the statement.</dd>
+      <dt id="#object">object</dt>
+      <dd>An identified or literal value for the object/value part of the statement.
+If left blank and if next row's subject cell is also blank, then an identifier
+is generated for both. If the value is the same as that of a variable introduced
+earlier in the current sheet for a statement's subject, then the value is interpreted
+as an instance of that variable, rather than as a literal string value with the same sequence
+of characters.</dd>
       <!--
       <dt id="#"></dt>
       <dd></dd>
@@ -35,14 +60,3 @@
     </dl>
   </body>
 </html>
-
-
-csvld:label
-        rdfs:label "label" ;
-        rdfs:comment: "A human-readable name for the subject." ;
-        owl:equivalentProperty rdfs:label .
-
-csvld:comment
-            rdfs:label "comment" ;
-            rdfs:comment "A description of the subject resource." ;
-            owl:equivalentProperty rdfs:comment .
