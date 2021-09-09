@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSV-LD Core Vocabulary</title>
+  <link rel="alternate" type="text/turtle" href="core.ttl">
+  <style type="text/css">
+    dt { font-weight: bold; text-decoration: underline dotted; }
+  </style>
+</head>
+  <body>
+    <dl>
+      <dt id="#formatVersion">formatVersion</dt>
+      <dd>The version of the CSV-LD format that a processor should assume for this spreadsheet.</dd>
+      <dt id="#vocabBase">vocabBase</dt>
+      <dd>The "vocabulary base" for terms in this spreadsheet.</dd>
+      <dt id="#prefix">prefix</dt>
+      <dd>Defines a prefix so that common URI bases can be prefixes of term URIs.</dd>
+      <dt id="#id">id</dt>
+      <dd>The URI for this sheet.</dd>
+      <dt id="#csvw">csvw</dt>
+      <dd>The URI for JSON-LD CSVW metadata for this sheet.</dd>
+      <dt id="#type">type</dt>
+      <dd>A category assigned to a subject. a subject may have multiple types.</dd>
+      <dt id="#label">label</dt>
+      <dd>A human-readable name for the subject.</dd>
+      <dt id="#comment">comment</dt>
+      <dd>A description of the subject resource.</dd>
+      <dt id="#"></dt>
+      <dd></dd>
+      <!--
+      <dt id="#"></dt>
+      <dd></dd>
+      -->
+    </dl>
+  </body>
+</html>
+
+
+csvld:label
+        rdfs:label "label" ;
+        rdfs:comment: "A human-readable name for the subject." ;
+        owl:equivalentProperty rdfs:label .
+
+csvld:comment
+            rdfs:label "comment" ;
+            rdfs:comment "A description of the subject resource." ;
+            owl:equivalentProperty rdfs:comment .
