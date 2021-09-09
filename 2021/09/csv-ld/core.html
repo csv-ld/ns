@@ -39,11 +39,15 @@ A block is analogous to a git commit or database transaction.</dd>
       <dd>Do you want to add this to the "main" namespace? A "test" namespace. If left blank, "main" is
 assumed. Analogous to a named graph or git branch.</dd>
       <dt id="#subject">subject</dt>
-      <dd>An identifier for the subject of the statement to be asserted or retracted.
+      <dd>
+An identifier for the subject of the statement to be asserted or retracted.
 If left blank and if previous row's object cell is also blank, then an identifier
-is generated for both. If not in the form of a URL or CURIE (using a registered #prefix),
+is generated for both. If left blank, if previous row's object cell is NOT also blank,
+and if this row is not the first row, then the subject of the previous row is assumed.
+If not in the form of a URL or CURIE (using a registered #prefix),
 then the cell value is interpreted to be a variable so as to unify with its usages in
-other cells in the changesheet -- an identifier is generated to substitute for the variable.</dd>
+other cells in the changesheet -- an identifier is generated to substitute for the variable.
+      </dd>
       <dt id="#predicate">predicate</dt>
       <dd>An identifier or recognized label for the predicate/attribute part of the statement.</dd>
       <dt id="#object">object</dt>
